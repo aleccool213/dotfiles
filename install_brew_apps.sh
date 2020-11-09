@@ -1,1 +1,1 @@
-brew install micro git
+brew install micro git gh hub terraform helm FairwindsOps/tap/pluto

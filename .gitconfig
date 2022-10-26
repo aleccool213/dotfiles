@@ -1,6 +1,7 @@
 [user]
 	email = alec@alec.coffee
 	name = Alec Brunelle
+	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIGPELGHlkvG5R3RznY8801hlLESHyKrFOg+bVCjd/w9d
 [core]
 	editor = micro
 [mergetool "Kaleidoscope"]
@@ -16,3 +17,22 @@
 	prompt = false
 [diff]
 	tool = Kaleidoscope
+[push]
+    default = current
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[pull]
+	rebase = false
+[init]
+	defaultBranch = main
+[gpg]
+	format = ssh
+[gpg "ssh"]
+	program = /Applications/1Password.app/Contents/MacOS/op-ssh-sign
+[commit]
+	gpgsign = true
+[rebase]
+	autosquash = true

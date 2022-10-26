@@ -1,2 +1,1 @@
-brew install FairwindsOps/tap/polaris
-brew install micro git gh hub kubectl minikube terraform helm FairwindsOps/tap/pluto heroku
+brew install micro git gh dive fish mongodb-community mysql-client pscale redis sqlite starship

@@ -1,11 +1,11 @@
  # Installs Brew Cask apps for a new Mac OS installation
-brew cask install \
-aerial font-fira-code-nerd-font 
-    brave-browser visual-studio-code discord spectacle notion
-    authy firefox nextdns zoom raycast
+brew tap homebrew/cask-fonts
+brew install --cask aerial font-fira-code
+    brave-browser discord spectacle notion
+    authy raycast
     insomnia dash bartender slack
     docker steam drawio
-    warp postman kaleidoscope@2 amphetamine
+    postman kaleidoscope@2 amphetamine
     1password battle-net deliveries proxyman medis numi
-    signal sonos tweetbot vlc zoomus twitter
+    signal sonos tweetbot vlc twitter
     1password/tap/1password-cli

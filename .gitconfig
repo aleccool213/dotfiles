@@ -1,22 +1,16 @@
 [user]
 	email = alec@alec.coffee
 	name = Alec Brunelle
-	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIGPELGHlkvG5R3RznY8801hlLESHyKrFOg+bVCjd/w9d
 [core]
-	editor = micro
-[mergetool "Kaleidoscope"]
-	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
-	trustExitCode = true
-[merge]
-	tool = Kaleidoscope
-[difftool "Kaleidoscope"]
-	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
-[difftool]
-	prompt = false
-[mergetool]
-	prompt = false
+	editor = code --wait
 [diff]
-	tool = Kaleidoscope
+  tool = vscode
+[difftool "vscode"]
+  cmd = code --wait --diff $LOCAL $REMOTE
+[merge]
+  tool = vscode
+[mergetool "vscode"]
+  cmd = code --wait $MERGED
 [push]
     default = current
 [filter "lfs"]
@@ -31,7 +25,7 @@
 [gpg]
 	format = ssh
 [gpg "ssh"]
-	program = /Applications/1Password.app/Contents/MacOS/op-ssh-sign
+	program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
 [commit]
 	gpgsign = true
 [rebase]
